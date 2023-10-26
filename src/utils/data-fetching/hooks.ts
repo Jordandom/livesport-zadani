@@ -1,6 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import { z } from 'zod';
-import { AllResultsResponse, allResultsSchema } from './schema-types';
 
 export type Filters = {
   sportIds?: string;
@@ -27,13 +25,7 @@ const buildQueryParams = (params: Filters) => {
   return urlParams.toString();
 };
 
-async function fetcher<TSchemaData extends z.ZodRawShape, TSchema extends z.ZodObject<TSchemaData>>({
-  url,
-  schema,
-}: {
-  url: string;
-  schema: z.ZodArray<TSchema>;
-}) {
+async function fetcher({ url }: { url: string }) {
   const response = await fetch(`${import.meta.env.VITE_APP_BASE_URL}&${url}`, {
     method: 'GET',
     headers: {
@@ -42,32 +34,19 @@ async function fetcher<TSchemaData extends z.ZodRawShape, TSchema extends z.ZodO
   });
 
   const results = await response.json();
-  return schema.parse(results) as z.infer<TSchema>[];
+  return results;
 }
 
 export const useAllResultsQuery = (resultsArguments: Filters) => {
-  return useQuery<AllResultsResponse>({
+  return useQuery({
     queryKey: ['allResults', resultsArguments],
     queryFn: async () => {
       return fetcher({
         url: `${buildQueryParams(resultsArguments)}`,
-        schema: allResultsSchema,
       });
     },
   });
 };
-
-// export const useAllResultsQuery = (resultsArguments?: Filters) => {
-//   return useQuery<AllResultsResponse>({
-//     queryKey: ['allResults', resultsArguments],
-//     queryFn: async () => {
-//       return fetcher({
-//         // url: `${buildQueryParams(resultsArguments)}`,
-//         schema: allResultsSchema,
-//       });
-//     },
-//   });
-// };
 
 // All sports
 // https://s.livesport.services/api/v2/search?lang-id=1&project-id=602&project-type-id=1&sport-ids=1,2,3,4,5,6,7,8,9&type-ids=1,2,3,4&q=aa
