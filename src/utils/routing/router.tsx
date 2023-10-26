@@ -13,7 +13,7 @@ const routes: RouteProps[] = [
 
 const Router: React.FC = () => {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-screen">
       <Routes>
         <Route element={<Layout />}>
           {routes.map((route) => (
