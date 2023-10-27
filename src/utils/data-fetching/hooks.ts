@@ -3,13 +3,14 @@ import { useQuery } from '@tanstack/react-query';
 export type Filters = {
   sportIds?: string;
   typeIds?: string;
-  q?: string;
+  query?: string;
 };
 
 const buildQueryParams = (params: Filters) => {
   const urlParams = new URLSearchParams();
 
-  const { sportIds, typeIds, q } = params;
+  const { sportIds, typeIds, query } = params;
+  console.log('🚀 ~ file: hooks.ts:13 ~ buildQueryParams ~ query:', query);
 
   if (sportIds) {
     urlParams.append('sport-ids', sportIds);
@@ -18,8 +19,8 @@ const buildQueryParams = (params: Filters) => {
   if (typeIds) {
     urlParams.append('type-ids', typeIds);
   }
-  if (q) {
-    urlParams.append('q', q);
+  if (query) {
+    urlParams.append('q', query);
   }
 
   return urlParams.toString();
