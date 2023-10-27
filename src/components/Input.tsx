@@ -7,7 +7,7 @@ type InputProps = {
 const Input = ({ setFilter }: InputProps) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const handleSearch = () => setFilter({ q: searchTerm });
+  const handleSearch = () => setFilter({ query: searchTerm });
 
   return (
     <div className="relative">
@@ -34,7 +34,6 @@ const Input = ({ setFilter }: InputProps) => {
         type="submit"
         className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         onClick={handleSearch}
-        disabled={!searchTerm}
       >
         Hledat
       </button>

@@ -5,10 +5,11 @@ import { useState } from 'react';
 import { EntityType } from 'types';
 
 const Results = () => {
+  // Initial state of the filter
   const [filter, setFilter] = useState({
-    sportIds: '1,2,3,4,5,6,7,8',
-    typeIds: '1,2,3',
-    q: 'aa',
+    sportIds: '1,2,3,4,5,6,7,8,9',
+    typeIds: '1,2,3,4',
+    query: 'aa',
   });
 
   const { data, isPending, error } = useAllResultsQuery(filter);
@@ -33,10 +34,10 @@ const Results = () => {
 
   if (error) console.log('🚀 ~ file: App.tsx:12 ~ App ~ error', error);
 
-  console.log('🚀 ~ file: App.tsx:6 ~ App ~ data:', data);
+  // console.log('🚀 ~ file: App.tsx:6 ~ App ~ data:', data);
   return (
     <div className="">
-      <Filter setFilter={setFilter} />
+      <Filter query={filter.query} setFilter={setFilter} />
       <div>
         {Object.keys(groupedData).map((sport) => (
           <div key={sport}>
@@ -45,7 +46,7 @@ const Results = () => {
                 {sport}
               </span>
             </h1>
-            <Entity players={groupedData[sport]} />
+            <Entity entities={groupedData[sport]} />
           </div>
         ))}
       </div>
