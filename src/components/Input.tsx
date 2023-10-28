@@ -1,13 +1,11 @@
+import { useFilterActions } from '@store/store';
 import { useState } from 'react';
 
-type InputProps = {
-  setFilter: React.Dispatch<React.SetStateAction<any>>;
-};
-
-const Input = ({ setFilter }: InputProps) => {
+const Input = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const { setQuery } = useFilterActions();
 
-  const handleSearch = () => setFilter({ query: searchTerm });
+  const handleSearch = () => setQuery(searchTerm);
 
   return (
     <div className="relative">
@@ -34,6 +32,7 @@ const Input = ({ setFilter }: InputProps) => {
         type="submit"
         className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         onClick={handleSearch}
+        disabled={searchTerm.length <= 1}
       >
         Hledat
       </button>

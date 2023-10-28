@@ -9,12 +9,7 @@ export type Filters = {
 const buildQueryParams = (params: Filters) => {
   const urlParams = new URLSearchParams();
 
-  const { sportIds, typeIds, query } = params;
-  console.log('🚀 ~ file: hooks.ts:13 ~ buildQueryParams ~ query:', query);
-
-  if (sportIds) {
-    urlParams.append('sport-ids', sportIds);
-  }
+  const { typeIds, query } = params;
 
   if (typeIds) {
     urlParams.append('type-ids', typeIds);
@@ -48,12 +43,3 @@ export const useAllResultsQuery = (resultsArguments: Filters) => {
     },
   });
 };
-
-// All sports
-// https://s.livesport.services/api/v2/search?lang-id=1&project-id=602&project-type-id=1&sport-ids=1,2,3,4,5,6,7,8,9&type-ids=1,2,3,4&q=aa
-// Mandatory params
-// https://s.livesport.services/api/v2/search?lang-id=1&project-id=602&project-type-id=1&q=aa
-// Football
-// https://s.livesport.services/api/v2/search?lang-id=1&project-id=602&project-type-id=1&sport-ids=1&q=aa
-// Djokovic Novak
-// // https://s.livesport.services/api/v2/search?lang-id=1&project-id=602&project-type-id=1&q=Djokovic%20Novak&sport-ids=2&type-ids=3
