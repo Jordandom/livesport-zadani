@@ -1,5 +1,6 @@
 import Entity from '@components/entity';
 import Filter from '@components/filter';
+import Loading from '@components/loading';
 import { useFilterQuery, useFilterTypeIds } from '@store/store';
 import { useAllResultsQuery } from '@utils/data-fetching/hooks';
 import { EntityType } from 'types';
@@ -32,7 +33,7 @@ const Results = () => {
     <div className="flex flex-col gap-4">
       <Filter />
       {isPending ? (
-        <p>Loading...</p>
+        <Loading />
       ) : (
         <>
           {Object.keys(groupedData).map((sport) => (
