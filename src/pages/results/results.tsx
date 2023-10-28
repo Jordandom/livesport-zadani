@@ -2,14 +2,17 @@ import Entity from '@components/entity';
 import Filter from '@components/filter';
 import Loading from '@components/loading';
 import { useFilterQuery, useFilterTypeIds } from '@store/store';
-import { useAllResultsQuery } from '@utils/data-fetching/hooks';
+import { useResultsQuery } from '@utils/data-fetching/hooks';
+import { substituteRouteParams } from '@utils/helpers';
+import { RoutePaths } from '@utils/routing/route-paths';
+import { Link } from 'react-router-dom';
 import { EntityType } from 'types';
 
 const Results = () => {
   const query = useFilterQuery();
   const typeIds = useFilterTypeIds();
 
-  const { data, isPending, error } = useAllResultsQuery({ query, typeIds });
+  const { data, isPending, error } = useResultsQuery({ query, typeIds });
 
   function groupBySport(data: EntityType[]) {
     return data?.reduce(
@@ -43,7 +46,17 @@ const Results = () => {
                   {sport}
                 </span>
               </h1>
-              <Entity entities={groupedData[sport]} />
+              {groupedData[sport].map((entity) => (
+                <Link
+                  key={entity.id}
+                  to={`${substituteRouteParams(RoutePaths.ResultsDetail, {
+                    entityId: entity.id,
+                  })}`}
+                  onClick={() => console.log('🚀 ~ file: results.tsx:80 ~ entity', entity)}
+                >
+                  <Entity entity={entity} />
+                </Link>
+              ))}
             </div>
           ))}
         </>
