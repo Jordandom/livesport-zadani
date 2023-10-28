@@ -28,7 +28,7 @@ type Country = {
   name: string;
 };
 
-type Image = {
+export type Image = {
   path: string;
   usageId: number;
   variantTypeId: number;

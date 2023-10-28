@@ -1,7 +1,8 @@
 import Entity from '@components/entity';
 import Filter from '@components/filter';
 import Loading from '@components/loading';
-import { useFilterQuery, useFilterTypeIds } from '@store/store';
+import { useFilterQuery, useFilterTypeIds } from '@store/filter-store';
+import { useResultDetailActions } from '@store/results-detail-store';
 import { useResultsQuery } from '@utils/data-fetching/hooks';
 import { substituteRouteParams } from '@utils/helpers';
 import { RoutePaths } from '@utils/routing/route-paths';
@@ -11,8 +12,15 @@ import { EntityType } from 'types';
 const Results = () => {
   const query = useFilterQuery();
   const typeIds = useFilterTypeIds();
+  const { setName, setDefaultCountry, setImage } = useResultDetailActions();
 
   const { data, isPending, error } = useResultsQuery({ query, typeIds });
+
+  const handleEntityClick = (entity: EntityType) => {
+    setName(entity.name);
+    setDefaultCountry(entity.defaultCountry.name);
+    setImage(entity.images[0]?.variantTypeId === 15 ? entity.images[0]?.path : '');
+  };
 
   function groupBySport(data: EntityType[]) {
     return data?.reduce(
@@ -40,8 +48,8 @@ const Results = () => {
       ) : (
         <>
           {Object.keys(groupedData).map((sport) => (
-            <div key={sport}>
-              <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            <div className="flex flex-col gap-4" key={sport}>
+              <h1 className="text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                 <span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
                   {sport}
                 </span>
@@ -52,7 +60,7 @@ const Results = () => {
                   to={`${substituteRouteParams(RoutePaths.ResultsDetail, {
                     entityId: entity.id,
                   })}`}
-                  onClick={() => console.log('🚀 ~ file: results.tsx:80 ~ entity', entity)}
+                  onClick={() => handleEntityClick(entity)}
                 >
                   <Entity entity={entity} />
                 </Link>

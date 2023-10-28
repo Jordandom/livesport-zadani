@@ -6,6 +6,9 @@ export type Filters = {
   query?: string;
 };
 
+const BASE_URL =
+  'https://s.livesport.services/api/v2/search?lang-id=1&project-id=602&project-type-id=1&sport-ids=1,2,3,4,5,6,7,8,9';
+
 const buildQueryParams = (params: Filters) => {
   const urlParams = new URLSearchParams();
 
@@ -22,7 +25,7 @@ const buildQueryParams = (params: Filters) => {
 };
 
 async function fetcher({ url }: { url: string }) {
-  const response = await fetch(`${import.meta.env.VITE_APP_BASE_URL}&${url}`, {
+  const response = await fetch(`${BASE_URL}&${url}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
