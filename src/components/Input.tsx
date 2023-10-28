@@ -1,4 +1,4 @@
-import { useFilterActions } from '@store/store';
+import { useFilterActions } from '@store/filter-store';
 import { useState } from 'react';
 
 const Input = () => {

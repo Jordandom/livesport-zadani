@@ -1,6 +1,6 @@
 import Input from '@components/input';
 import Button from '@components/button';
-import { useFilterActions } from '@store/store';
+import { useFilterActions } from '@store/filter-store';
 import { useState } from 'react';
 
 enum Filters {
