@@ -1,49 +1,40 @@
 import Input from '@components/input';
-import Button from './button';
+import Button from '@components/button';
+import { useFilterActions } from '@store/store';
+import { useState } from 'react';
 
-type FilterProps = {
-  // TODO: Change any to the type of the filter object
-  query: string;
-  setFilter: React.Dispatch<React.SetStateAction<any>>;
-};
+enum Filters {
+  All = '1,2,3,4',
+  Competitions = '1',
+  Teams = '2,3,4',
+}
 
-const Filter = ({ query, setFilter }: FilterProps) => {
-  console.log('🚀 ~ file: Filter.tsx:11 ~ Filter ~ filter:', query);
+const Filter = () => {
+  const { setTypeIds } = useFilterActions();
+  // State to keep track of the active filter
+  const [activeFilter, setActiveFilter] = useState<Filters>(Filters.All);
+
+  // Function to set the type IDs and update the active filter
+  const handleFilterClick = (filter: Filters) => {
+    setTypeIds(filter);
+    setActiveFilter(filter);
+  };
+
+  // Function to conditionally apply the "active" class to the button
+  const isActive = (filter: Filters) => activeFilter === filter;
+
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-col gap-4">
-        <Input setFilter={setFilter} />
+      <div className="flex flex-col items-center gap-4">
+        <Input />
         <div className="flex gap-4 items-center">
-          <Button
-            title="Vše"
-            onClick={() =>
-              setFilter({
-                sportIds: '1,2,3,4,5,6,7,8,9',
-                typeIds: '1,2,3,4',
-                query,
-              })
-            }
-          />
+          <Button title="Vše" active={isActive(Filters.All)} onClick={() => handleFilterClick(Filters.All)} />
           <Button
             title="Soutěže"
-            onClick={() =>
-              setFilter({
-                sportIds: '1,2,3,4,5,6,7,8,9',
-                typeIds: '1',
-                query,
-              })
-            }
+            active={isActive(Filters.Competitions)}
+            onClick={() => handleFilterClick(Filters.Competitions)}
           />
-          <Button
-            title="Týmy"
-            onClick={() =>
-              setFilter({
-                sportIds: '1,2,3,4,5,6,7,8,9',
-                typeIds: '2,3,4',
-                query,
-              })
-            }
-          />
+          <Button title="Týmy" active={isActive(Filters.Teams)} onClick={() => handleFilterClick(Filters.Teams)} />
         </div>
       </div>
     </div>
