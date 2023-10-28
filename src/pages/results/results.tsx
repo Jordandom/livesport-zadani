@@ -1,5 +1,5 @@
-import Entity from '@components/entity';
 import Filter from '@components/filter';
+import Entity from '@components/entity';
 import Loading from '@components/loading';
 import { useFilterQuery, useFilterTypeIds } from '@store/filter-store';
 import { useResultDetailActions } from '@store/results-detail-store';
