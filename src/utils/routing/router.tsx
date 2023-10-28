@@ -3,12 +3,12 @@ import { Route, RouteProps, Routes } from 'react-router-dom';
 import Layout from '@utils/routing/layout';
 import { RoutePaths } from '@utils/routing/route-paths';
 import Results from '@pages/results/results';
+import ResultsDetail from '@pages/results/results-detail';
 
 const routes: RouteProps[] = [
   { path: '/', element: <Results /> },
   { path: RoutePaths.Results, element: <Results /> },
-  // TODO:FIXME: Change this to a ResultsDetail component
-  { path: RoutePaths.ResultsDetail, element: <Results /> },
+  { path: RoutePaths.ResultsDetail, element: <ResultsDetail /> },
 ];
 
 const Router: React.FC = () => {

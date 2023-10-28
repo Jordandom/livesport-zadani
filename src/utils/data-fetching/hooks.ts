@@ -33,9 +33,9 @@ async function fetcher({ url }: { url: string }) {
   return results;
 }
 
-export const useAllResultsQuery = (resultsArguments: Filters) => {
+export const useResultsQuery = (resultsArguments: Filters) => {
   return useQuery({
-    queryKey: ['allResults', resultsArguments],
+    queryKey: ['results', resultsArguments],
     queryFn: async () => {
       return fetcher({
         url: `${buildQueryParams(resultsArguments)}`,
