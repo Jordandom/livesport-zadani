@@ -1,4 +1,4 @@
-import Filter from '@components/filte';
+import Filter from '@components/filter';
 import Entity from '@components/entity';
 import Loading from '@components/loading';
 import { useFilterQuery, useFilterTypeIds } from '@store/filter-store';
