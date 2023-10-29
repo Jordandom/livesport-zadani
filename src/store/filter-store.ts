@@ -8,8 +8,7 @@ export type FilterStore = {
     setTypeIds: (typeIds: string) => void;
   };
 };
-
-enum DefaultFilter {
+export enum DefaultFilter {
   Query = 'aa',
   TypeIds = '1,2,3,4',
 }

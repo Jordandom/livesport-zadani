@@ -23,7 +23,7 @@ const Results = () => {
     setImage(entity.images[0]?.variantTypeId === 15 ? entity.images[0]?.path : '');
   };
 
-  function groupBySport(data: EntityType[]) {
+  const groupBySport = (data: EntityType[]) => {
     return data?.reduce(
       (acc, item) => {
         const sportName = item.sport.name;
@@ -35,7 +35,7 @@ const Results = () => {
       },
       {} as { [key: string]: EntityType[] }
     );
-  }
+  };
 
   const groupedData = groupBySport(data);
 

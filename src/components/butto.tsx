@@ -2,10 +2,12 @@ type ButtonProps = {
   active: boolean;
   title: string;
   onClick: () => void;
+  testId?: string;
 };
 
-const Button = ({ title, onClick, active }: ButtonProps) => (
+const Button = ({ title, onClick, active, testId }: ButtonProps) => (
   <button
+    data-cy={testId}
     type="button"
     className={`text-white bg-gradient-to-br from-purple-600 to-blue-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-gradient-to-bl ${
       active && 'ring-4 outline-none ring-blue-300 dark:ring-blue-800'
