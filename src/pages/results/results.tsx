@@ -52,6 +52,11 @@ const Results = () => {
   return (
     <div className="flex flex-col gap-4">
       <Filter />
+      {data?.length === 0 && (
+        <div className="flex justify-center items-center">
+          <Heading title="Žádné výsledky" />
+        </div>
+      )}
       {isPending ? (
         <Loading />
       ) : (
