@@ -1,0 +1,1117 @@
+[
+  {
+    "id": "OOXnKGbO",
+    "url": "aarhus",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aarhus",
+    "type": {
+      "id": 2,
+      "name": "Team"
+    },
+    "participantTypes": [
+      {
+        "id": 1,
+        "name": "Team"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": "1_OOXnKGbO",
+      "portable": "1_OOXnKGbO"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 63,
+      "name": "Denmark"
+    },
+    "images": [
+      {
+        "path": "MyPsdDHG-hGuhahGg.png",
+        "usageId": 2,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": null,
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "U1YrLdqI",
+    "url": "aalborg",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aalborg",
+    "type": {
+      "id": 2,
+      "name": "Team"
+    },
+    "participantTypes": [
+      {
+        "id": 1,
+        "name": "Team"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": "1_U1YrLdqI",
+      "portable": "1_U1YrLdqI"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 63,
+      "name": "Denmark"
+    },
+    "images": [
+      {
+        "path": "EwBYzNCr-jDG0G1yS.png",
+        "usageId": 2,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": null,
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "nyrL8gfh",
+    "url": "aalesund",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aalesund",
+    "type": {
+      "id": 2,
+      "name": "Team"
+    },
+    "participantTypes": [
+      {
+        "id": 1,
+        "name": "Team"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": "1_nyrL8gfh",
+      "portable": "1_nyrL8gfh"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 145,
+      "name": "Norway"
+    },
+    "images": [
+      {
+        "path": "0b6aHmYg-QBQwYJis.png",
+        "usageId": 2,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": null,
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "IyJCjGTe",
+    "url": "rodriguez-aaron-alonso",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Rodriguez Aaron Alonso",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 12,
+        "name": "Goalkeeper"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 176,
+      "name": "Spain"
+    },
+    "images": [],
+    "teams": [
+      {
+        "id": "SKbpVP5K",
+        "name": "Barcelona",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "xKJLSVyG",
+        "name": "Barcelona U16",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "QL1jU5VT",
+        "name": "Barcelona U18",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "xYDyBxfd",
+        "name": "Barcelona U19",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "K4P35GyD",
+        "name": "Barcelona B",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "dnohA1sG",
+    "url": "ramsdale-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Ramsdale Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 12,
+        "name": "Goalkeeper"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 198,
+      "name": "England"
+    },
+    "images": [
+      {
+        "path": "h8odn5YA-xnQDOCMF.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "j9N9ZNFA",
+        "name": "England",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      },
+      {
+        "id": "hA1Zm19f",
+        "name": "Arsenal",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "fBD08Fin",
+    "url": "ramsey-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Ramsey Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 14,
+        "name": "Midfielder"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 207,
+      "name": "Wales"
+    },
+    "images": [
+      {
+        "path": "6ovf1UGG-MTpUaSv8.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "YcUP0Nqp",
+        "name": "Wales",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      },
+      {
+        "id": "hO8wh6aP",
+        "name": "Cardiff",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "ULGuGvHA",
+    "url": "aarau",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aarau",
+    "type": {
+      "id": 2,
+      "name": "Team"
+    },
+    "participantTypes": [
+      {
+        "id": 1,
+        "name": "Team"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": "1_ULGuGvHA",
+      "portable": "1_ULGuGvHA"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 182,
+      "name": "Switzerland"
+    },
+    "images": [
+      {
+        "path": "juVx3ug5-nLy4dj0C.png",
+        "usageId": 2,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": null,
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "faGmGOOh",
+    "url": "wan-bissaka-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Wan-Bissaka Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 13,
+        "name": "Defender"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 198,
+      "name": "England"
+    },
+    "images": [
+      {
+        "path": "rsOB5WYA-YBMZ4k1a.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "ppjDR086",
+        "name": "Manchester United",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "rcIXJMf9",
+    "url": "hickey-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Hickey Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 13,
+        "name": "Defender"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 199,
+      "name": "Scotland"
+    },
+    "images": [
+      {
+        "path": "MonKwkg5-zBZQiSmG.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "fZRU25WH",
+        "name": "Scotland",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      },
+      {
+        "id": "xYe7DwID",
+        "name": "Brentford",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "GxbOZOLI",
+    "url": "van-aanholt-patrick",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "van Aanholt Patrick",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 13,
+        "name": "Defender"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 139,
+      "name": "Netherlands"
+    },
+    "images": [
+      {
+        "path": "tnDHKhZg-nTDjk9Ti.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "M9UEHJWi",
+        "name": "PSV",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "fcMqoMcH",
+    "url": "cresswell-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Cresswell Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 13,
+        "name": "Defender"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 198,
+      "name": "England"
+    },
+    "images": [
+      {
+        "path": "0QnNqjYg-8QtLUpvb.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "Cxq57r8g",
+        "name": "West Ham",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "WdUyDHHI",
+    "url": "nassur-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Nassur Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 13,
+        "name": "Defender"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 77,
+      "name": "France"
+    },
+    "images": [],
+    "teams": [
+      {
+        "id": "SblU3Hee",
+        "name": "Marseille",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "0GqS59FE",
+    "url": "aaronson-brendan",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aaronson Brenden",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 14,
+        "name": "Midfielder"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 200,
+      "name": "USA"
+    },
+    "images": [
+      {
+        "path": "QoyMBUzS-U5tiJOTh.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "pzHW4oaE",
+        "name": "Union Berlin",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "fuitL4CF",
+        "name": "USA",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "ze2Rpql1",
+    "url": "aaronson-paxten",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aaronson Paxten",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 14,
+        "name": "Midfielder"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 200,
+      "name": "USA"
+    },
+    "images": [
+      {
+        "path": "CAX0mAGG-EBukRt4P.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "8vndvXTk",
+        "name": "Eintracht Frankfurt",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "ENMJDKnM",
+        "name": "USA U23",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "dW39xeed",
+    "url": "keto-diyawa-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Keto-Diyawa Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 13,
+        "name": "Defender"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 198,
+      "name": "England"
+    },
+    "images": [
+      {
+        "path": "tUoOdlZg-As1wH9R4.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "j3Azpf5d",
+        "name": "Wolves",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "6aLnhd7F",
+        "name": "Wolves U21",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "ILyQwlfH",
+        "name": "Wolves U23",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "xAIndfPQ",
+    "url": "sanchez-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Sanchez Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 14,
+        "name": "Midfielder"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 19,
+      "name": "Andorra"
+    },
+    "images": [
+      {
+        "path": "nkXw3BYA-r7susAX4.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "dnO5z404",
+        "name": "Andorra",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      },
+      {
+        "id": "6kBSnSvE",
+        "name": "UE Santa Coloma",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "xUFoTcAS",
+    "url": "malouda-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Malouda Aaron",
+    "type": {
+      "id": 4,
+      "name": "PlayerInTeam"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      },
+      {
+        "id": 15,
+        "name": "Forward"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": null,
+      "portable": null
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 77,
+      "name": "France"
+    },
+    "images": [
+      {
+        "path": "OEYytKYg-2aQDEx8M.png",
+        "usageId": 3,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": [
+      {
+        "id": "pfDZL71o",
+        "name": "Lille",
+        "kind": "TEAM",
+        "participantType": {
+          "id": 1,
+          "name": "Team"
+        }
+      },
+      {
+        "id": "YL4McSPu",
+        "name": "France U19",
+        "kind": "NOMINATION",
+        "participantType": {
+          "id": 17,
+          "name": "National"
+        }
+      }
+    ],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "4vYDKyGS",
+    "url": "capitel-aaron",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Capitel Aaron",
+    "type": {
+      "id": 3,
+      "name": "Player"
+    },
+    "participantTypes": [
+      {
+        "id": 2,
+        "name": "Player"
+      }
+    ],
+    "sport": {
+      "id": 2,
+      "name": "Tennis"
+    },
+    "favouriteKey": {
+      "web": "2_4vYDKyGS",
+      "portable": "2_4vYDKyGS"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 200,
+      "name": "USA"
+    },
+    "images": [],
+    "teams": [],
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "vVvGBNnT",
+    "url": "aafjord",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aafjord",
+    "type": {
+      "id": 2,
+      "name": "Team"
+    },
+    "participantTypes": [
+      {
+        "id": 1,
+        "name": "Team"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": "1_vVvGBNnT",
+      "portable": "1_vVvGBNnT"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 145,
+      "name": "Norway"
+    },
+    "images": [],
+    "teams": null,
+    "defaultTournament": null,
+    "superTemplate": null
+  },
+  {
+    "id": "6qIINjoJ",
+    "url": "aalesund",
+    "gender": {
+      "id": 1,
+      "name": "Men"
+    },
+    "name": "Aalesund 2",
+    "type": {
+      "id": 2,
+      "name": "Team"
+    },
+    "participantTypes": [
+      {
+        "id": 1,
+        "name": "Team"
+      }
+    ],
+    "sport": {
+      "id": 1,
+      "name": "Soccer"
+    },
+    "favouriteKey": {
+      "web": "1_6qIINjoJ",
+      "portable": "1_6qIINjoJ"
+    },
+    "flagId": null,
+    "defaultCountry": {
+      "id": 145,
+      "name": "Norway"
+    },
+    "images": [
+      {
+        "path": "vNtZxjyB-tA1ouEML.png",
+        "usageId": 2,
+        "variantTypeId": 15
+      }
+    ],
+    "teams": null,
+    "defaultTournament": null,
+    "superTemplate": null
+  }
+]
