@@ -9,13 +9,14 @@ import { RoutePaths } from '@utils/routing/route-paths';
 import { Link } from 'react-router-dom';
 import { EntityType } from 'types';
 import Heading from '@components/heading';
+import { toast } from 'sonner';
 
 const Results = () => {
   const query = useFilterQuery();
   const typeIds = useFilterTypeIds();
   const { setName, setDefaultCountry, setImage } = useResultDetailActions();
 
-  const { data, isPending, error } = useResultsQuery({ query, typeIds });
+  const { data, isPending, error, refetch } = useResultsQuery({ query, typeIds });
 
   const handleEntityClick = (entity: EntityType) => {
     setName(entity.name);
@@ -39,7 +40,14 @@ const Results = () => {
 
   const groupedData = groupBySport(data);
 
-  if (error) console.log('🚀 ~ file: App.tsx:12 ~ App ~ error', error);
+  if (error)
+    toast.error('Něco se pokazilo, zkuste to prosím znovu.', {
+      position: 'top-center',
+      action: {
+        label: 'Obnovit',
+        onClick: () => refetch(),
+      },
+    });
 
   return (
     <div className="flex flex-col gap-4">
