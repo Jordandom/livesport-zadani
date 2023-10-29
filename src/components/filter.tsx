@@ -1,4 +1,4 @@
-import Input from '@components/input';
+import Input from '@components/inpu';
 import Button from '@components/button';
 import { useFilterActions } from '@store/filter-store';
 import { useState } from 'react';
