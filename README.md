@@ -35,6 +35,8 @@ bun install
 
 Run the development server: bun dev
 
+local: http://localhost:5173/
+
 ### Testing with Cypress
 
 bun cypress open
