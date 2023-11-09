@@ -4,8 +4,8 @@ export enum AvatarSize {
 }
 
 type AvatarProps = {
-  name: string;
-  imagePath: string;
+  name: string | undefined;
+  imagePath: string | undefined;
   size?: AvatarSize;
 };
 

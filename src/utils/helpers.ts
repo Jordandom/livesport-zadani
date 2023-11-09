@@ -1,5 +1,8 @@
 type Params = {
   entityId: string;
+  entityName: string;
+  entityImage: string;
+  entityCountry: string;
 };
 
 /**
@@ -23,8 +26,8 @@ export const substituteRouteParams = (route: string, params: Params) => {
  * @param name - The name to get the initials from.
  * @returns The initials of the given name.
  */
-export const getInitials = (name: string): string => {
+export const getInitials = (name: string | undefined): string => {
   const parts = name?.split(' ');
-  const initials = parts.map((part) => part.charAt(0).toUpperCase());
-  return initials.join('');
+  const initials = parts?.map((part) => part.charAt(0).toUpperCase());
+  return initials?.join('') || '';
 };

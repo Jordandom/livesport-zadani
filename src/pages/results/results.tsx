@@ -2,7 +2,6 @@ import Filter from '@components/filter';
 import Entity from '@components/entity';
 import Loading from '@components/loading';
 import { useFilterQuery, useFilterTypeIds } from '@store/filter-store';
-import { useResultDetailActions } from '@store/results-detail-store';
 import { useResultsQuery } from '@utils/data-fetching/hooks';
 import { substituteRouteParams } from '@utils/helpers';
 import { RoutePaths } from '@utils/routing/route-paths';
@@ -10,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { EntityType } from 'types';
 import Heading from '@components/heading';
 import { toast } from 'sonner';
+
 type SportGrouping = {
   [sportName: string]: EntityType[];
 };
@@ -17,15 +17,8 @@ type SportGrouping = {
 const Results = () => {
   const query = useFilterQuery();
   const typeIds = useFilterTypeIds();
-  const { setName, setDefaultCountry, setImage } = useResultDetailActions();
 
   const { data, isPending, error, refetch } = useResultsQuery({ query, typeIds });
-
-  const handleEntityClick = (entity: EntityType) => {
-    setName(entity.name);
-    setDefaultCountry(entity.defaultCountry.name);
-    setImage(entity.images[0]?.variantTypeId === 15 ? entity.images[0]?.path : '');
-  };
 
   const groupBySport = (data: EntityType[]): SportGrouping => {
     return data?.reduce<SportGrouping>((acc, item) => {
@@ -69,8 +62,10 @@ const Results = () => {
                   key={entity.id}
                   to={`${substituteRouteParams(RoutePaths.ResultsDetail, {
                     entityId: entity.id,
+                    entityName: entity.name,
+                    entityImage: entity.images[0]?.variantTypeId === 15 ? entity.images[0]?.path : 'null',
+                    entityCountry: entity.defaultCountry.name,
                   })}`}
-                  onClick={() => handleEntityClick(entity)}
                 >
                   <Entity entity={entity} />
                 </Link>

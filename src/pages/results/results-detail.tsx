@@ -2,15 +2,17 @@ import Avatar, { AvatarSize } from '@components/avatar';
 import AvatarInitials from '@components/avatar-initials';
 import Heading from '@components/heading';
 import Text from '@components/text';
-import { useResultDetailName, useResultDetailImage, useResultDetailDefaultCountry } from '@store/results-detail-store';
 import { RoutePaths } from '@utils/routing/route-paths';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const ResultsDetail = () => {
   const navigate = useNavigate();
-  const name = useResultDetailName();
-  const image = useResultDetailImage();
-  const country = useResultDetailDefaultCountry();
+
+  const { entityName, entityImage, entityCountry } = useParams<{
+    entityName: string;
+    entityImage: string;
+    entityCountry: string;
+  }>();
 
   return (
     <>
@@ -23,14 +25,14 @@ const ResultsDetail = () => {
       </button>
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 items-center my-4">
-          {image ? (
-            <Avatar name={name} imagePath={image} size={AvatarSize.Large} />
+          {entityImage !== 'null' ? (
+            <Avatar name={entityName} imagePath={entityImage} size={AvatarSize.Large} />
           ) : (
-            <AvatarInitials name={name} size={AvatarSize.Large} />
+            <AvatarInitials name={entityName} size={AvatarSize.Large} />
           )}
-          <Text text={name} />
+          <Text text={entityName} />
         </div>
-        <Heading title={country} />
+        <Heading title={entityCountry} />
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import { getInitials } from '@utils/helpers';
 import { AvatarSize } from '@components/avatar';
 
 type AvatarInitialsProps = {
-  name: string;
+  name: string | undefined;
   size?: AvatarSize;
 };
 
