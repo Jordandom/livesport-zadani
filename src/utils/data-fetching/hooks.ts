@@ -33,7 +33,7 @@ const buildQueryParams = (params: Filters) => {
  * Fetches data from the specified URL using the GET method and returns the parsed JSON response.
  * @param {Object} options - The options object.
  * @param {string} options.url - The URL to fetch data from.
- * @returns {Promise<any>} - A promise that resolves to the parsed JSON response.
+ * @returns {Promise<unknown>} - A promise that resolves to the parsed JSON response.
  */
 async function fetcher({ url }: { url: string }) {
   const response = await fetch(`${BASE_URL}&${url}`, {

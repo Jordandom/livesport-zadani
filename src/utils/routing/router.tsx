@@ -6,7 +6,6 @@ import Results from '@pages/results/results';
 import ResultsDetail from '@pages/results/results-detail';
 
 const routes: RouteProps[] = [
-  { path: '/', element: <Results /> },
   { path: RoutePaths.Results, element: <Results /> },
   { path: RoutePaths.ResultsDetail, element: <ResultsDetail /> },
 ];

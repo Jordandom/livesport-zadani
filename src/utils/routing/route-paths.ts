@@ -1,4 +1,4 @@
 export enum RoutePaths {
-  Results = '/results',
+  Results = '/',
   ResultsDetail = '/results/:entityId',
 }

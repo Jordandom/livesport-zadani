@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom';
 import { EntityType } from 'types';
 import Heading from '@components/heading';
 import { toast } from 'sonner';
+type SportGrouping = {
+  [sportName: string]: EntityType[];
+};
 
 const Results = () => {
   const query = useFilterQuery();
@@ -24,18 +27,15 @@ const Results = () => {
     setImage(entity.images[0]?.variantTypeId === 15 ? entity.images[0]?.path : '');
   };
 
-  const groupBySport = (data: EntityType[]) => {
-    return data?.reduce(
-      (acc, item) => {
-        const sportName = item.sport.name;
-        if (!acc[sportName]) {
-          acc[sportName] = [];
-        }
-        acc[sportName].push(item);
-        return acc;
-      },
-      {} as { [key: string]: EntityType[] }
-    );
+  const groupBySport = (data: EntityType[]): SportGrouping => {
+    return data?.reduce<SportGrouping>((acc, item) => {
+      const sportName = item.sport.name;
+      if (!acc[sportName]) {
+        acc[sportName] = [];
+      }
+      acc[sportName].push(item);
+      return acc;
+    }, {});
   };
 
   const groupedData = groupBySport(data);
