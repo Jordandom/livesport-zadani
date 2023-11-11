@@ -1,4 +1,4 @@
-import Router from './utils/routing/router';
+import Router from 'utils/routing/router';
 
 const App = () => <Router />;
 
