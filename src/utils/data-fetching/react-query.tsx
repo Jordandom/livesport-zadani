@@ -1,4 +1,7 @@
-import { QueryClient, QueryClientProvider as ReactQueryClientProvider } from '@tanstack/react-query';
+import {
+  QueryClient,
+  QueryClientProvider as ReactQueryClientProvider,
+} from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ReactNode } from 'react';
 
