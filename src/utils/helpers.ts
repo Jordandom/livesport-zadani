@@ -31,3 +31,12 @@ export const getInitials = (name: string | undefined): string => {
   const initials = parts?.map((part) => part.charAt(0).toUpperCase());
   return initials?.join('') || '';
 };
+
+/**
+ * Replaces all occurrences of '/' with '-' in the given string.
+ * @param value - The string to modify.
+ * @returns The modified string.
+ */
+export const replaceSlashWithDash = (value: string): string => {
+  return value.replace(/\//g, '-');
+};

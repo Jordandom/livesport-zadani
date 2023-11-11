@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { useFilterQuery, useFilterTypeIds } from 'store/filter-store';
 import { EntityType } from 'types';
 import { useResultsQuery } from 'utils/data-fetching/hooks';
-import { substituteRouteParams } from 'utils/helpers';
+import { replaceSlashWithDash, substituteRouteParams } from 'utils/helpers';
 import { RoutePaths } from 'utils/routing/route-paths';
 
 type SportGrouping = {
@@ -49,7 +49,7 @@ const Results = () => {
     <div className="flex flex-col gap-4">
       <Filter />
       {data?.length === 0 && (
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <Heading title="Žádné výsledky" />
         </div>
       )}
@@ -65,7 +65,7 @@ const Results = () => {
                   key={entity.id}
                   to={`${substituteRouteParams(RoutePaths.ResultsDetail, {
                     entityId: entity.id,
-                    entityName: entity.name,
+                    entityName: replaceSlashWithDash(entity.name),
                     entityImage:
                       entity.images[0]?.variantTypeId === 15
                         ? entity.images[0]?.path
