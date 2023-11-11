@@ -9,11 +9,15 @@ type AvatarProps = {
   size?: AvatarSize;
 };
 
-const Avatar = ({ name, imagePath: path, size = AvatarSize.Small }: AvatarProps) => {
+const Avatar = ({
+  name,
+  imagePath: path,
+  size = AvatarSize.Small,
+}: AvatarProps) => {
   return (
     <img
-      className={`p-1 rounded-full ring-2 ring-cyan-400 dark:ring-cyan-400
-      ${size === AvatarSize.Small ? 'w-24 h-24' : 'w-48 h-48'}`}
+      className={`rounded-full p-1 ring-2 ring-cyan-400 dark:ring-cyan-400
+      ${size === AvatarSize.Small ? 'h-24 w-24' : 'h-48 w-48'}`}
       src={`https://www.livesport.cz/res/image/data/${path}`}
       alt={name}
     />

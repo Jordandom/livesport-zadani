@@ -1,7 +1,7 @@
-import Input from '@components/input';
-import Button from '@components/button';
-import { useFilterActions } from '@store/filter-store';
+import Button from 'components/button';
+import Input from 'components/input';
 import { useState } from 'react';
+import { useFilterActions } from 'store/filter-store';
 
 enum Filters {
   All = '1,2,3,4',
@@ -27,14 +27,22 @@ const Filter = () => {
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center gap-4">
         <Input />
-        <div className="flex gap-4 items-center">
-          <Button title="Vše" active={isActive(Filters.All)} onClick={() => handleFilterClick(Filters.All)} />
+        <div className="flex items-center gap-4">
+          <Button
+            title="Vše"
+            active={isActive(Filters.All)}
+            onClick={() => handleFilterClick(Filters.All)}
+          />
           <Button
             title="Soutěže"
             active={isActive(Filters.Competitions)}
             onClick={() => handleFilterClick(Filters.Competitions)}
           />
-          <Button title="Týmy" active={isActive(Filters.Teams)} onClick={() => handleFilterClick(Filters.Teams)} />
+          <Button
+            title="Týmy"
+            active={isActive(Filters.Teams)}
+            onClick={() => handleFilterClick(Filters.Teams)}
+          />
         </div>
       </div>
     </div>

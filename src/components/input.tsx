@@ -1,5 +1,5 @@
-import { useFilterActions } from '@store/filter-store';
 import { useState } from 'react';
+import { useFilterActions } from 'store/filter-store';
 
 const Input = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -9,8 +9,13 @@ const Input = () => {
 
   return (
     <div className="relative">
-      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="none" viewBox="0 0 20 20">
+      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+        <svg
+          className="h-4 w-4 text-gray-500 dark:text-gray-400"
+          aria-hidden="true"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
           <path
             stroke="currentColor"
             strokeLinecap="round"
@@ -23,14 +28,14 @@ const Input = () => {
       <input
         type="search"
         id="search"
-        className="block w-96	p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="block w-96	rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         placeholder="Zadejte hledaný text"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
       />
       <button
         type="submit"
-        className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 disabled:cursor-not-allowed"
+        className="absolute bottom-2.5 right-2.5 rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:cursor-not-allowed dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         onClick={handleSearch}
         disabled={searchTerm.length <= 1}
       >

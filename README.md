@@ -1,42 +1,27 @@
-# React + SWC + Vite + TypeScript + Tailwind + Eslint + Prettier + Husky
+# React + TypeScript + Vite
 
-## Flashscore frontend developer
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Referenční cvičení pro test znalostí a rozvoj kandidáta
+Currently, two official plugins are available:
 
-Welcome to the React Vite SWC TypeScript Tailwind App! This application is built using the powerful Vite build tool, and utilizes TypeScript for static type checking and Tailwind CSS for styling. Cypress for component testing to ensure the robustness of our components.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Features
+## Expanding the ESLint configuration
 
-- **Vite**: Enjoy a faster development experience with Vite's rapid cold server start & blazing fast HMR.
-- **SWC** is 20x faster than Babel on a single thread and 70x faster on four cores
-- **TypeScript**: Benefit from static type checking and catch errors early during development.
-- **Tailwind CSS**: Utilize utility-first CSS framework for rapid UI development.
-- **Cypress**: Ensure the quality of components with comprehensive testing using Cypress.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Getting Started
+- Configure the top-level `parserOptions` property like this:
 
-### Prerequisites
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
-- Node.js
-- bun, npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone [your-repo-link] && cd [your-repo-name]
-   ```
-2. Install dependencies:
-
-bun install
-
-### Development
-
-Run the development server: bun dev
-
-local: http://localhost:5173/
-
-### Testing with Cypress
-
-bun cypress open
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

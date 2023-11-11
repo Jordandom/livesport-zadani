@@ -1,14 +1,14 @@
-import Filter from '@components/filter';
-import Entity from '@components/entity';
-import Loading from '@components/loading';
-import { useFilterQuery, useFilterTypeIds } from '@store/filter-store';
-import { useResultsQuery } from '@utils/data-fetching/hooks';
-import { substituteRouteParams } from '@utils/helpers';
-import { RoutePaths } from '@utils/routing/route-paths';
+import Entity from 'components/entity';
+import Filter from 'components/filter';
+import Heading from 'components/heading';
+import Loading from 'components/loading';
 import { Link } from 'react-router-dom';
-import { EntityType } from 'types';
-import Heading from '@components/heading';
 import { toast } from 'sonner';
+import { useFilterQuery, useFilterTypeIds } from 'store/filter-store';
+import { EntityType } from 'types';
+import { useResultsQuery } from 'utils/data-fetching/hooks';
+import { substituteRouteParams } from 'utils/helpers';
+import { RoutePaths } from 'utils/routing/route-paths';
 
 type SportGrouping = {
   [sportName: string]: EntityType[];
@@ -18,7 +18,10 @@ const Results = () => {
   const query = useFilterQuery();
   const typeIds = useFilterTypeIds();
 
-  const { data, isPending, error, refetch } = useResultsQuery({ query, typeIds });
+  const { data, isPending, error, refetch } = useResultsQuery({
+    query,
+    typeIds,
+  });
 
   const groupBySport = (data: EntityType[]): SportGrouping => {
     return data?.reduce<SportGrouping>((acc, item) => {
@@ -63,7 +66,10 @@ const Results = () => {
                   to={`${substituteRouteParams(RoutePaths.ResultsDetail, {
                     entityId: entity.id,
                     entityName: entity.name,
-                    entityImage: entity.images[0]?.variantTypeId === 15 ? entity.images[0]?.path : 'null',
+                    entityImage:
+                      entity.images[0]?.variantTypeId === 15
+                        ? entity.images[0]?.path
+                        : 'null',
                     entityCountry: entity.defaultCountry.name,
                   })}`}
                 >
